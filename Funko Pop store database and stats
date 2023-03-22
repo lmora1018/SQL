@@ -1,0 +1,34 @@
+-Create a Funko pop store database
+
+CREATE TABLE Funkopop (
+id INTEGER PRIMARY KEY,
+name TEXT, 
+price INTEGER,
+condition TEXT,
+quantity INTEGER);
+
+INSERT INTO Funkopop VALUES
+(1, "Captain America", 300, "New", 1),
+(2, "Ghostface", 440, "New", 1),
+(3, "Beast Titan", 165, "New", 5),
+(4, "Luffy", 20, "average", 5),
+(5, "Sailor Moon", 30, "Old", 3)
+(6, "Ryuk", 145, "Used", 3),
+(7, "Goku", 60, "New", 1),
+(8, "Eren Yeager", 80, "New", 3),
+(9, "Mikasa Ackerman", 180, "New", 1),
+(10, "Ash Ketchum", 25, "New", 2),
+(11, "Freddy Krueger", 1, "Mint", 1), 
+(12, "Steve", 2, "Old", 2),
+(13, "Fred Astraire", 1, "New", 9),
+(14, "Vegeta", 200, "New", 2),
+(15, "Pikachu", 240, "Used", 1);
+
+-Display the database ordered by price
+SELECT * FROM Funkopop
+ORDER BY price asc;
+
+-What was the average price for items under $200
+SELECT AVG(price) 
+FROM Funkopop
+WHERE price <200
