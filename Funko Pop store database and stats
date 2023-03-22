@@ -32,3 +32,8 @@ ORDER BY price asc;
 SELECT AVG(price) 
 FROM Funkopop
 WHERE price <200
+
+-Which Funkopop sold mora than 4?
+SELECT * FROM Funkopop
+WHERE quantity >4
+Order by quantity;
